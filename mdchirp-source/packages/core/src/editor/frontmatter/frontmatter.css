@@ -1,0 +1,163 @@
+/* FrontmatterPanel — 접이식 가로 영역 스타일. 기존 토큰/룩과 맞춤. */
+
+.mdc-fm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mdc-fm__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.mdc-fm__row--checks {
+  gap: 16px;
+  padding-top: 2px;
+}
+
+.mdc-fm__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+.mdc-fm__field--grow {
+  flex: 1 1 220px;
+}
+
+.mdc-fm__label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.mdc-fm__input,
+.mdc-fm__textarea {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mdc-fm__textarea {
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.mdc-fm__input:focus,
+.mdc-fm__textarea:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.2);
+}
+
+.mdc-fm__slugrow {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.mdc-fm__slugrow .mdc-fm__input {
+  flex: 1 1 auto;
+}
+
+.mdc-fm__suggest {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.mdc-fm__cands {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.mdc-fm__cand {
+  font: inherit;
+  font-size: 12px;
+  padding: 3px 8px;
+  border: 1px solid #c4b5fd;
+  border-radius: 999px;
+  background: #f5f3ff;
+  color: #5b21b6;
+  cursor: pointer;
+}
+
+.mdc-fm__cand:hover {
+  background: #ede9fe;
+}
+
+.mdc-fm__candempty {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.mdc-fm__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #374151;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 저자 드롭다운 전용(A-1): 등록된 저자 없을 때 안내 박스 */
+.mdc-fm__authorempty {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #6b7280;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.mdc-fm__authorempty code {
+  font-size: 11px;
+  padding: 1px 4px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  color: #374151;
+}
+
+/* 저자 지우기 버튼: 정사각형 X 아이콘 (세로로 접히지 않게 고정 크기) */
+.mdc-fm__authorclear {
+  flex: 0 0 auto;
+  width: 32px;
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1;
+  color: #9ca3af;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    color 0.15s,
+    border-color 0.15s,
+    background 0.15s;
+}
+
+.mdc-fm__authorclear:hover {
+  color: #dc2626;
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
