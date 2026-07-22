@@ -1,7 +1,0 @@
-# 이미지에 들어가면 안 되는 것들
-**/node_modules
-**/dist
-**/.data
-**/.dev.vars
-**/.git
-**/*.log
